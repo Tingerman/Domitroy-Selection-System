@@ -10,6 +10,7 @@
       <area target="" alt="8号楼" title="8号楼" href="./#/bahaolou" coords="1157,771,1279,831" shape="rect" @click="dormClick(8)">
       <area target="" alt="9号楼" title="9号楼" href="./#/jiuhaolou" coords="1473,796,1343,733" shape="rect" @click="dormClick(9)">
     </map>
+    <div class="prompt_index">* 五号楼、八号楼、九号楼、十三号楼、十四号楼为当前开放的学生宿舍，其他楼宇暂不开放住宿选择</div>
   </div>
 </template>
 
@@ -73,5 +74,11 @@ export default {
 /* #CribMap > area :hover {
   border: 2px red solid;
 } */
+
+.prompt_index {
+  color: saddlebrown;
+  margin-left: 10px;
+  margin-top: 20px;
+}
 </style>
 

@@ -59,6 +59,13 @@ export const constantRoutes = [
       component: () => import('@/views/choosing_index/wuhaolou'),
       meta: { title: '5号楼', icon: 'form' },
       hidden: true
+    },
+    {
+      path: '/room/:num',
+      name: 'room',
+      component: () => import('@/views/choosing_index/room_spec'),
+      meta: { title: '房间', icon: 'form' },
+      hidden: true
     }]
   },
 
@@ -70,69 +77,10 @@ export const constantRoutes = [
         path: 'index',
         name: 'choosing_index',
         component: () => import('@/views/choosing_index/index'),
-        meta: { title: '选宿舍', icon: 'form' }
+        meta: { title: '选宿舍', icon: 'table' }
       }
     ]
   },
-
-  // {
-  //   path: '/nested',
-  //   component: Layout,
-  //   redirect: '/nested/menu1',
-  //   name: 'Nested',
-  //   meta: {
-  //     title: '污水处理系统',
-  //     icon: 'nested'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'menu1',
-  //       component: () => import('@/views/nested/menu1/index'), // Parent router-view
-  //       name: 'Menu1',
-  //       meta: { title: 'Menu1' },
-  //       children: [
-  //         {
-  //           path: 'menu1-1',
-  //           component: () => import('@/views/nested/menu1/menu1-1'),
-  //           name: 'Menu1-1',
-  //           meta: { title: 'Menu1-1' }
-  //         },
-  //         {
-  //           path: 'menu1-2',
-  //           component: () => import('@/views/nested/menu1/menu1-2'),
-  //           name: 'Menu1-2',
-  //           meta: { title: 'Menu1-2' },
-  //           children: [
-  //             {
-  //               path: 'menu1-2-1',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-  //               name: 'Menu1-2-1',
-  //               meta: { title: 'Menu1-2-1' }
-  //             },
-  //             {
-  //               path: 'menu1-2-2',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-  //               name: 'Menu1-2-2',
-  //               meta: { title: 'Menu1-2-2' }
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'menu1-3',
-  //           component: () => import('@/views/nested/menu1/menu1-3'),
-  //           name: 'Menu1-3',
-  //           meta: { title: 'Menu1-3' }
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'menu2',
-  //       component: () => import('@/views/nested/menu2/index'),
-  //       name: 'Menu2',
-  //       meta: { title: 'menu2' }
-  //     }
-  //   ]
-  // },
 
   {
     path: 'external-link',
@@ -146,12 +94,14 @@ export const constantRoutes = [
   },
 
   {
-    path: 'external-link',
+    path: '',
     component: Layout,
     children: [
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: '公告', icon: 'link' }
+        path: '/gonggao',
+        name: 'gonggao',
+        component: () => import('@/views/choosing_index/gonggao'),
+        meta: { title: '公告', icon: 'form' },
       }
     ]
   },
